@@ -1,0 +1,37 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 24px;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0; }
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1; }
+
+.input {
+  font-size: 0.7em;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 12px; }
+
+.button {
+  font-size: 0.7em;
+  padding: 0.6em 1em;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #4f97f3;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  .button:hover {
+    background-color: #3a7bbf; }
+
+/*# sourceMappingURL=index.css.map */

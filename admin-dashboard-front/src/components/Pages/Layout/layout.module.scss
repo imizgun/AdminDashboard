@@ -1,0 +1,16 @@
+.layout {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto repeat(7, 1fr);
+  height: 100vh;
+
+  .header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .content {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+  }
+}

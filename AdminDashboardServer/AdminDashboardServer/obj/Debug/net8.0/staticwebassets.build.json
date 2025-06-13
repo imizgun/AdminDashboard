@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dVvLBBiruJnSg4ZBoloSHFmN0OT05BEuQqUi+Nqo6dI=",
+  "Source": "AdminDashboardServer",
+  "BasePath": "_content/AdminDashboardServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

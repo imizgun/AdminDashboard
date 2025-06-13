@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,gBAAgB,EAAE,OAAO;EACzB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EAEnB,aAAK;IACD,OAAO,EAAE,IAAI;IACb,WAAW,EAAE,MAAM;IACnB,cAAc,EAAE,MAAM;IACtB,GAAG,EAAE,IAAI",
+"sources": ["loginform.module.scss"],
+"names": [],
+"file": "loginform.module.css"
+}
