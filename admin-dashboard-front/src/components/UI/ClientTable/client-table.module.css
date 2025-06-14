@@ -1,0 +1,52 @@
+/*
+Error: Invalid CSS after "...olor: variables": expected ";", was ".$main-blue;"
+        on line 9 of client-table.module.scss
+
+4:   width: 100%;
+5:   border-collapse: collapse;
+6:   border: 1px solid #ddd;
+7: 
+8:   .thead {
+9:     background-color: variables.$main-blue;
+10:   }
+11: 
+12:   .tbody {
+13: 
+14:     .tr {
+
+Backtrace:
+client-table.module.scss:9
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Users/miham/AppData/Local/Microsoft/WindowsApps/sass:32:in `load'
+C:/Users/miham/AppData/Local/Microsoft/WindowsApps/sass:32:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...olor: variables\": expected \";\", was \".$main-blue;\"\A         on line 9 of client-table.module.scss\A \A 4:   width: 100%;\A 5:   border-collapse: collapse;\A 6:   border: 1px solid #ddd;\A 7: \A 8:   .thead {\A 9:     background-color: variables.$main-blue;\A 10:   }\A 11: \A 12:   .tbody {\A 13: \A 14:     .tr {"; }

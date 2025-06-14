@@ -1,0 +1,22 @@
+@use '../../../variables';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+
+  .thead {
+    background-color: variables.$main-blue;
+  }
+
+  .tbody {
+
+    .tr {
+      border: 1px solid #ddd;
+    }
+
+    .td {
+      text-align: center;
+    }
+  }
+}

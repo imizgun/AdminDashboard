@@ -20,6 +20,7 @@ public static class ClientsController {
 		
 				return Results.Ok(clients);
 			})
+			.RequireAuthorization()
 			.WithOpenApi();
 
 		app.MapPost("/clients", async (DashboardDbContext db, PostClient client) => {
@@ -32,7 +33,8 @@ public static class ClientsController {
 			await db.SaveChangesAsync();
 			
 			return Results.Ok(new {clientId = newClient.ClientId});
-		});
+		})
+		.RequireAuthorization();
 		
 		app.MapPut("/clients/{id}", async (DashboardDbContext db, UpdateClientDto client, Guid id) => {
 			var sameEmailClient = await db.Clients.FirstOrDefaultAsync(x => x.Email == client.Email);
@@ -50,12 +52,14 @@ public static class ClientsController {
 			await db.SaveChangesAsync();
 			
 			return updateRes > 0 ? Results.Ok(new {message = "Updated successfully"}) :  Results.NotFound();
-		});
+		})
+		.RequireAuthorization();
 
 		app.MapDelete("/clients/{id}", async (DashboardDbContext db, Guid id) => {
 			var deleteRes = await db.Clients.Where(x => x.ClientId == id).ExecuteDeleteAsync();
 
 			return deleteRes > 0 ? Results.Ok() : Results.NotFound();
-		});
+		})
+		.RequireAuthorization();
 	}
 }

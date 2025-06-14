@@ -1,5 +1,5 @@
 import LoginForm from "../../UI/LoginForm/LoginForm.tsx";
-import classes from "./LoginPage.module.css";
+import classes from "./loginpage.module.scss";
 
 const LoginPage = () => {
     return (

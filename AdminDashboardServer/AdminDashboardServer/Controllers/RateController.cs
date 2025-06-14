@@ -5,7 +5,8 @@ namespace AdminDashboardServer.Controllers;
 
 public static class RateController {
 	public static void MapRateEndpoints(this WebApplication app) {
-		app.MapGet("/rate", (GlobalRateState gs) => Results.Ok(new RateDto {Rate = gs.Rate}));
+		app.MapGet("/rate", (GlobalRateState gs) => Results.Ok(new RateDto {Rate = gs.Rate}))
+			.RequireAuthorization();
 
 		app.MapPost("/rate", (GlobalRateState gs, [FromBody] RateDto dto) => {
 			if (dto.Rate <= 0) 
@@ -19,6 +20,7 @@ public static class RateController {
 			{
 				message = $"Rate successfully updated to {gs.Rate}"
 			});
-		});
+		})
+		.RequireAuthorization();
 	}
 }

@@ -1,3 +1,5 @@
+@use 'variables';
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -34,7 +36,7 @@ h1 {
     padding: 0.6em 1em;
     border: 1px solid transparent;
     border-radius: 12px;
-    background-color: #4f97f3;
+    background-color: variables.$main-blue;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;

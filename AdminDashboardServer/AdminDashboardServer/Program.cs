@@ -1,18 +1,47 @@
+using System.Text;
 using AdminDashboardServer;
 using AdminDashboardServer.Controllers;
 using AdminDashboardServer.DatabaseAccess;
 using AdminDashboardServer.DatabaseAccess.Domain;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Payment = AdminDashboardServer.DatabaseAccess.Domain.Payment;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGetWithAuth();
+
 builder.Services.AddSingleton<GlobalRateState>();
 builder.Services.AddSingleton<Hasher>();
+builder.Services.AddSingleton<TokenProvider>();
+
 builder.Services.AddDbContext<DashboardDbContext>(opt => {
-	opt.UseNpgsql("Username=postgres;Password=123;Host=localhost;Port=5432;Database=dashboard;");
+	opt.UseNpgsql(builder.Configuration.GetConnectionString("RegisterDbContext"));
+});
+
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+	.AddJwtBearer(options => {
+		options.RequireHttpsMetadata = false;
+		options.TokenValidationParameters = new TokenValidationParameters {
+			IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtSettings.SecretKey)),
+			ValidIssuer = JwtSettings.Issuer,
+			ValidAudience = JwtSettings.Audience,
+			ClockSkew = TimeSpan.Zero
+		};
+	});
+
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy("AllowLocalhost5173", policy =>
+	{
+		policy.WithOrigins("http://localhost:5173")
+			.AllowAnyHeader()
+			.AllowAnyMethod()
+			.AllowCredentials();
+	});
 });
 
 var app = builder.Build();
@@ -26,6 +55,7 @@ if (app.Environment.IsDevelopment()) {
 using (var scope = app.Services.CreateScope())
 {
 	var db = scope.ServiceProvider.GetRequiredService<DashboardDbContext>();
+	db.Database.Migrate();
 	
 	if (!db.Clients.Any() && !db.Payments.Any()) {
 		var hasher = scope.ServiceProvider.GetRequiredService<Hasher>();
@@ -84,7 +114,6 @@ using (var scope = app.Services.CreateScope())
 		await db.SaveChangesAsync();
 	}
 	
-	db.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
@@ -92,5 +121,8 @@ app.MapClientEndpoints();
 app.MapPaymentEndpoints();
 app.MapRateEndpoints();
 app.MapAuthEndpoints();
+app.UseCors("AllowLocalhost5173");
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();

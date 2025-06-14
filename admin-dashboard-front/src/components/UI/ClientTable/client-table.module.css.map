@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACL,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,QAAQ;EACzB,MAAM,EAAE,cAAc;EAEtB,aAAO;IACL,gBAAgB,EAAE,OAAO",
+"sources": ["client-table.module.scss"],
+"names": [],
+"file": "client-table.module.css"
+}

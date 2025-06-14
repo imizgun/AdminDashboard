@@ -1,0 +1,16 @@
+.dashboard {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .dashboard .table {
+    width: 60%; }
+  @media (max-width: 768px) {
+    .dashboard {
+      gap: 50px;
+      align-items: center;
+      flex-direction: column; }
+      .dashboard .table {
+        width: 100%; } }
+
+/*# sourceMappingURL=dashboard-page.module.css.map */

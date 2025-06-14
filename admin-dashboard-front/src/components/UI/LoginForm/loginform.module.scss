@@ -12,5 +12,17 @@
         align-items: center;
         flex-direction: column;
         gap: 10px;
+
+        .error {
+            max-height: 0;
+            overflow: hidden;
+            color: #e84e4e;
+            font-size: 0.8rem;
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+                max-height: 200px;
+            }
+        }
     }
 }

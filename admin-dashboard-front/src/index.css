@@ -1,37 +1,48 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-size: 24px;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+/*
+Error: Invalid CSS after "...olor: variables": expected ";", was ".$main-blue;"
+        on line 39 of index.scss
 
-body {
-  margin: 0; }
+34: .button {
+35:     font-size: 0.7em;
+36:     padding: 0.6em 1em;
+37:     border: 1px solid transparent;
+38:     border-radius: 12px;
+39:     background-color: variables.$main-blue;
+40:     color: white;
+41:     cursor: pointer;
+42:     transition: all 0.3s ease;
+43: 
+44:   &:hover {
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1; }
-
-.input {
-  font-size: 0.7em;
-  padding: 0.6em;
-  border: 1px solid #ccc;
-  border-radius: 12px; }
-
-.button {
-  font-size: 0.7em;
-  padding: 0.6em 1em;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  background-color: #4f97f3;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease; }
-  .button:hover {
-    background-color: #3a7bbf; }
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+index.scss:39
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Users/miham/.local/share/gem/ruby/3.3.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Users/miham/AppData/Local/Microsoft/WindowsApps/sass:32:in `load'
+C:/Users/miham/AppData/Local/Microsoft/WindowsApps/sass:32:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...olor: variables\": expected \";\", was \".$main-blue;\"\A         on line 39 of index.scss\A \A 34: .button {\A 35:     font-size: 0.7em;\A 36:     padding: 0.6em 1em;\A 37:     border: 1px solid transparent;\A 38:     border-radius: 12px;\A 39:     background-color: variables.$main-blue;\A 40:     color: white;\A 41:     cursor: pointer;\A 42:     transition: all 0.3s ease;\A 43: \A 44:   &:hover {"; }

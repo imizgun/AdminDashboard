@@ -1,0 +1,60 @@
+.rate_block {
+  padding: 20px;
+  margin-right: 40px;
+  background-color: #dddddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  .cancel_button {
+    font-size: 0.7em;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1em;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: #ef7070;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #cc5f5f;
+    }
+
+    &.active {
+      max-height: 40px;
+      opacity: 1;
+      padding: 0.6em 1em;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .rate {
+    font-size: 1em;
+    font-weight: bold;
+    width: 30%;
+    background-color: #dddddd;
+    border: none;
+    text-align: center;
+    padding: 0.5em 0;
+    outline: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      border-bottom: 1px solid #888888;
+      width: 50%;
+    };
+
+    &:focus {
+      border-bottom: 1px solid black;
+    }
+  }
+}

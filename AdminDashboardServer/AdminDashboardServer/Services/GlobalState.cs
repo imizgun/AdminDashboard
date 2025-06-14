@@ -1,5 +1,5 @@
 ﻿namespace AdminDashboardServer;
 
 public class GlobalRateState {
-	public double Rate {get; set;}
+	public double Rate { get; set; } = 10;
 }
