@@ -7,7 +7,7 @@
 
 ## Запуск проекта
  - Для запуска использовать команду `docker-compose up --build` из корневой папки проекта (убедитесь, что запущен движок докера)
- - Если у вас установлена PostgreSQL, возможен запуск команадами `dotnet run` из папки `AdminDashboardServer` и `npm install` + `npm run dev` из папки `admin-dashboard-front`
+ - Если у вас установлена PostgreSQL, возможен запуск команадами `dotnet run` из папки `AdminDashboardServer/AdminDashboardServer` и `npm install` + `npm run dev` из папки `admin-dashboard-front`
  - При любом варианте запуска бэкенд будет доступен по `localhost:5000`, фронтенд - по `localhost:5173`
 
 ## Структура фронтенда
