@@ -20,7 +20,7 @@ services:
     container_name: aspnet-backend
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__RegisterDbContext=Host=db;Port=5432;Database=mydb;Username=postgres;Password=postgres
+      - ConnectionStrings__RegisterDbContext=Host=db;Port=5432;Database=dashboard;Username=postgres;Password=123
     ports:
       - "5000:8080" 
     depends_on:
